@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title (click)="goRentals()">Cancel</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div align="center" class="ion-padding">
+      <ion-avatar class="profile">
+        <img src="assets/portugal.jpg">
+      </ion-avatar>
+      <!-- <h1 text-center class="padded"><b>{{currentRental.city}}, {{currentRental.country}}</b></h1>  -->
+      <h1 *ngIf="currentRental" class="padded" text-center><b>{{currentRental.city}}</b>, {{currentRental.country}}</h1>
+      <p>{{currentRental.duration}} days</p>
+      <p>${{currentRental.price}} per night</p>
+      <p><i>[Description TBC]</i></p>
+    </div>
+</ion-content>

@@ -104,10 +104,6 @@ export class RentaldetailsPage implements OnInit {
       this.navCtrl.navigateForward('tabs/tab2');
     }
   
-    goListing() {
-      this.navCtrl.navigateForward('rental-details');
-    }
-    
     goRentals() {
       this.navCtrl.navigateForward('tabs/tab3');
     }

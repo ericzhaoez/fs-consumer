@@ -27,6 +27,11 @@ export class Tab3Page {
   this.rentaldetails.country = "Israel";
   this.rentaldetails.duration = 30;
 
+  this.currentRental = new Rental();
+  this.currentRental.city = "Lisbon";
+  this.currentRental.country = "Portugal";
+  this.currentRental.duration = 48;
+
   console.log(this.rentalService);
   this.rentalService.getAllRentals();
   this.rentals = this.rentalService.rentals;
@@ -46,8 +51,8 @@ export class Tab3Page {
     this.navCtrl.navigateForward('tabs/tab2');
   }
 
-  goListing() {
-    this.navCtrl.navigateForward('rental-details');
+  goCurrent() {
+    this.navCtrl.navigateForward('current');
   }
 
   goBack() {

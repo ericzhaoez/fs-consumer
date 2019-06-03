@@ -1,0 +1,43 @@
+ion-content{
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    padding-left: 10px;
+}
+ion-input{
+    font-size: 14px;
+    --placeholder-font-size: 14px;
+}
+ion-label{
+    font-size: 14px;
+    --placeholder-font-size: 14px;
+}
+ion-textarea{
+    font-size: 14px;
+    --placeholder-font-size: 14px;
+}
+ion-item{
+    font-size: 14px;
+    --placeholder-font-size: 14px;
+}
+h1.padded{
+    padding-left: 15px;
+}
+
+.main-button{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: none;
+}
+
+ion-toolbar{
+    --background: #3880ff;
+    --color: #fff;
+  }
+
+.profile{
+    width: 200px;
+    height: 200px;
+}
