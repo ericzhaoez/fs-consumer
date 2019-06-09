@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Rental } from '../models';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
     providedIn: 'root'
@@ -10,15 +11,40 @@ import { Rental } from '../models';
     public rentaldetails: Rental; 
     public rental: Rental;
     public rentals: Array<Rental> = [];
+    public property: Rental;
+    public properties: Array<Rental> = [];
   
-    constructor() { }
+    constructor(private httpClient: HttpClient) { }
   
+
+// this code doesn't actually work haha i dunno what i was thinking
+    // getAllProperties() {
+    //   this.properties = [];
+    //   this.httpClient
+    //       .get("http://localhost:3000/api/properties/")
+    //       .subscribe(
+    //         (response: any) => { 
+    //         this.properties = [];
+    //         let property = new Rental();
+    //           property.id = response[0].id,
+    //           property.name = response[0].name,
+    //           property.location = response[0].location,
+    //           property.imageUrl = response[0].imageUrl,
+    //           property.price = response[0].price
+
+    //         this.properties.push(property);
+    //         }
+    //       )
+    // }
+
+
+
     getAllRentals() {
       this.rentals = [];
     
       let rental1 = new Rental();
         rental1.id = 1;
-        rental1.city = "Tel Aviv";
+        rental1.city = "Tel Aviv Hostel";
         rental1.country = "Israel";
         rental1.duration = 30;
         rental1.price = 300;
@@ -26,7 +52,7 @@ import { Rental } from '../models';
     
       let rental2 = new Rental();
         rental2.id = 2;
-        rental2.city = "Berlin";
+        rental2.city = "Berlin Hostel";
         rental2.country = "Germany";
         rental2.duration = 18;
         rental2.price = 260;
@@ -34,7 +60,7 @@ import { Rental } from '../models';
       
       let rental3 = new Rental();
         rental3.id = 3;
-        rental3.city = "Cape Town";
+        rental3.city = "Cape Town Hostel";
         rental3.country = "South Africa";
         rental3.duration = 4;
         rental3.price = 310;
@@ -42,7 +68,7 @@ import { Rental } from '../models';
     
       let rental4 = new Rental();
         rental4.id = 4;
-        rental4.city = "Sydney";
+        rental4.city = "Sydney Hostel";
         rental4.country = "Australia";
         rental4.duration = 10;
         rental4.price = 280;
@@ -69,4 +95,18 @@ import { Rental } from '../models';
       return foundRental;
     }
   
+    findPropertybyId(id: number, cb: Function): Rental {
+      let foundProperty: Rental = null;
+
+      this.properties.forEach(
+        (property: Rental) => {
+          if (property.id == id) {
+            foundProperty = property;
+          }
+        }
+      );
+
+      return foundProperty;
+    }
+
   }

@@ -28,11 +28,11 @@ export class RentaldetailsPage implements OnInit {
     this.rentalService.getAllRentals();
     this.rentals = this.rentalService.rentals;
   
-    this.rentaldetails = new Rental();
-    this.rentaldetails.city = "Tel Aviv";
-    this.rentaldetails.country = "Israel";
-    this.rentaldetails.duration = 30;
-    this.rentaldetails.cityimage = "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/07/05/11/tel-aviv-jaffa.jpg?w968h681";
+    // this.rentaldetails = new Rental();
+    // this.rentaldetails.city = "Tel Aviv";
+    // this.rentaldetails.country = "Israel";
+    // this.rentaldetails.duration = 30;
+    // this.rentaldetails.cityimage = "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/07/05/11/tel-aviv-jaffa.jpg?w968h681";
     
   //   let rental1 = new Rental();
   //     rental1.id = 1;

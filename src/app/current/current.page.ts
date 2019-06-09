@@ -27,7 +27,7 @@ export class CurrentPage implements OnInit {
       ) {
 
     this.currentRental = new Rental();
-    this.currentRental.city = "Lisbon";
+    this.currentRental.city = "Lisbon Hostel";
     this.currentRental.country = "Portugal";
     this.currentRental.price = 240;
     this.currentRental.duration = 48;

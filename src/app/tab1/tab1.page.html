@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Explore
+      Explore Listings
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,9 +14,34 @@
         <ion-card-title>
           <h1 class="padded"><b>Welcome to Not-Airbnb!</b></h1>
         </ion-card-title>
+        <p>Explore our list of new properties below! All new listings that have been created will show up here.</p>
       </ion-card-header>
-      <ion-card-content>
-        <p>Explore other nearby listings, coming soon!</p>
-      </ion-card-content>
     </ion-card>
+
+    <!-- this code is the first version of the list of properties, and uses data that is hard coded -->
+    <!-- <ion-list>
+      <ion-card>
+        <ion-item *ngFor="let rental of rentals" (click)="goRentals(rental)">
+            <ion-avatar class="explore">
+                <img src="{{rental.cityimage}}">
+              </ion-avatar>
+              <b>{{rental.city}}</b>, {{rental.country}} (${{rental.price}} per night)
+              <ion-button class="main-button" expand="block" (click)="goRentals(rental)">View or Book</ion-button>
+        </ion-item>
+      </ion-card>
+      </ion-list> -->
+
+      <!-- this code will display a list of all properties that have been created in the api by the provider app -->
+      <ion-list>
+          <ion-card>
+            <ion-item *ngFor="let property of properties" (click)="goBooking(property)">
+              <!-- <ion-item> -->
+                <ion-avatar class="explore">
+                    <img src="{{property.imageUrl}}">
+                  </ion-avatar>
+                  <b>{{property.name}}</b><p>-</p><p>{{property.location}} (${{property.price}} per night)</p>
+                  <ion-button class="main-button" expand="block" (click)="goBooking(property)">Request Booking</ion-button>
+            </ion-item>
+          </ion-card>
+          </ion-list>
 </ion-content>

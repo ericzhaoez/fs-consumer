@@ -14,8 +14,9 @@
       </ion-avatar>
       <!-- <h1 text-center class="padded"><b>{{currentRental.city}}, {{currentRental.country}}</b></h1>  -->
       <h1 *ngIf="currentRental" class="padded" text-center><b>{{currentRental.city}}</b>, {{currentRental.country}}</h1>
+      <p>Your stay: {{currentRental.duration}} days</p>
       <p>${{currentRental.price}} per night</p>
-      <p><i>[Description TBC]</i></p>
+      <!-- <p><i>[Description coming soon!]</i></p> -->
     </div>
     <!-- <div class="ion-padding">
         <ion-card>

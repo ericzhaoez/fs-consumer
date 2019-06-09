@@ -1,70 +1,72 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Profile
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <div align="center" class="ion-padding">
-    <ion-avatar class="profile">
-      <img src="assets/Eric.jpg">
-    </ion-avatar>
-    <h1 text-center class="padded"><b>Hi, I'm {{currentUser.firstname}}</b></h1> 
-  </div>
-  <div>
-    <ion-card>
-      <p><b>About</b></p>
-      <ion-item>
-      <p><ion-icon name="home"></ion-icon>
-        Lives in {{currentUser.city}}, {{currentUser.country}}
-      </p>
-      </ion-item>
-      <ion-item>
-      <p><ion-icon name="send"></ion-icon>
-        {{currentUser.email}}
-      </p>
-      </ion-item>
-      <ion-item>
-      <p><ion-icon name="call"></ion-icon>
-        {{currentUser.phone}}
-      </p>
-      </ion-item>
-      <ion-item>
-      <p><ion-icon name="bookmark"></ion-icon>
-        {{currentUser.bookings}} bookings
-      </p>
-      </ion-item>
-    </ion-card> 
-    <ion-card>
-      <p><b>Reviews (3)</b></p>
-      <ion-list>
-        <ion-item *ngFor="let review of reviews" class="review">
-          <ion-avatar class="review">
-              <img src="{{review.avatar}}">
-            </ion-avatar>
-          <p><b>{{review.author}}:</b></p>
-          <p>{{review.rating}}<ion-icon name="star"></ion-icon>
-          {{review.wordreview}}</p>
-        
-        <!-- <p><ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star-outline"></ion-icon>
-        ({{review1.rating}}/5) {{review1.wordreview}}</p>
+    <ion-toolbar>
+      <ion-title>
+        Profile
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div align="center" class="ion-padding">
+      <ion-avatar class="profile">
+        <img src="assets/default.png">
+      </ion-avatar>
+      <h1 text-center class="padded"><b>Hi, I'm {{user.firstname}}</b></h1> 
+    </div>
+    <div>
+      <ion-card>
+        <!-- <P>Name: {{user.firstname}} {{user.lastname}}, Email: {{user.email}}</P> -->
+        <p><b>About</b></p>
+        <ion-item>
+        <p><ion-icon name="home"></ion-icon>
+          {{user.firstname}} {{user.lastname}}
+        </p>
         </ion-item>
         <ion-item>
-        <p><ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-          <ion-icon name="star"></ion-icon>
-        ({{review2.rating}}/5) {{review2.wordreview}}</p> -->
+        <p><ion-icon name="send"></ion-icon>
+          {{user.email}}
+        </p>
         </ion-item>
-      </ion-list> 
-    </ion-card>
-    <ion-button class="main-button" expand="block" (click)="goLog()">Log out</ion-button>
-  </div>
-</ion-content>
+        <!-- <ion-item>
+        <p><ion-icon name="call"></ion-icon>
+          {{currentUser.phone}}
+        </p>
+        </ion-item> -->
+        <!-- <ion-item>
+        <p><ion-icon name="bookmark"></ion-icon>
+          {{currentUser.bookings}} bookings
+        </p>
+        </ion-item> -->
+      </ion-card> 
+      <ion-card>
+        <p><b>Reviews (3)</b></p>
+        <ion-list>
+          <ion-item *ngFor="let review of reviews" class="review">
+            <ion-avatar class="review">
+                <img src="{{review.avatar}}">
+              </ion-avatar>
+            <p><b>{{review.author}}:</b></p>
+            <p>{{review.rating}}<ion-icon name="star"></ion-icon>
+            {{review.wordreview}}</p>
+          
+          <!-- <p><ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+          ({{review1.rating}}/5) {{review1.wordreview}}</p>
+          </ion-item>
+          <ion-item>
+          <p><ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+          ({{review2.rating}}/5) {{review2.wordreview}}</p> -->
+          </ion-item>
+        </ion-list> 
+      </ion-card>
+      <ion-button class="main-button" expand="block" (click)="goLog()">Log out</ion-button>
+    </div>
+  </ion-content>
+  

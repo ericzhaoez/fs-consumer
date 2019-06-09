@@ -21,6 +21,29 @@ ion-content{
   font-family: 'Roboto', sans-serif;
 }
 
+ion-card.explore{
+  display: flex;
+  flex-direction: column;
+  width: 100% !important;
+}
+
+ion-item:hover{
+  --background: lightgrey;
+}
+
+ion-avatar.explore{
+  padding: 7px;
+  width: 100px;
+  height: 100px;
+}
+
+.main-button{
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: none;
+}
+
 ion-toolbar{
   --background: #3880ff;
   --color: #fff;

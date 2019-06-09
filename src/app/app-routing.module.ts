@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'register', loadChildren: './auth/register/register.module#RegisterPageModule' },
   { path: 'home', loadChildren: './auth/login/login.module#LoginPageModule' },
   { path: 'rentaldetails', loadChildren: './rentaldetails/rentaldetails.module#RentaldetailsPageModule' },  { path: 'current', loadChildren: './current/current.module#CurrentPageModule' },
+  { path: 'booking', loadChildren: './booking/booking.module#BookingPageModule' },
 
 
 

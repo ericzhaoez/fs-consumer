@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
     <ion-title>Register</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,20 +18,23 @@
               </div>
               <div padding>
                 <ion-item>
-                  <ion-input  name="name" type="text" placeholder="Name" ngModel required></ion-input>
+                  <ion-input  name="firstname" type="text" placeholder="First Name" [(ngModel)]="user.firstname"></ion-input>
                   </ion-item>
                   <ion-item>
-                    <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+                  <ion-input  name="lastname" type="text" placeholder="Last Name" [(ngModel)]="user.lastname"></ion-input>
                   </ion-item>
                   <ion-item>
-                    <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+                    <ion-input name="email" type="email" placeholder="your@email.com" [(ngModel)]="user.email"></ion-input>
                   </ion-item>
                   <ion-item>
-                    <ion-input name="confirm" type="password" placeholder="Password (again)" ngModel required></ion-input>
+                    <ion-input name="password" type="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-input name="confirm" type="password" placeholder="Password (again)"></ion-input>
                   </ion-item>
                 </div>
                 <div padding>
-                    <ion-button size="large" (click)="goLogin()" expand="block">Register</ion-button>
+                    <ion-button size="large" (click)="submit()" expand="block">Register</ion-button>
                 </div> 
                 <div text-center>
                   <ion-button slot="center" size="medium" class="cancel" (click)="goLogin()">Cancel</ion-button>

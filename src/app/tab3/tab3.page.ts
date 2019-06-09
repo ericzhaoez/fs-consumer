@@ -21,14 +21,14 @@ export class Tab3Page {
     ) {
 
     
-  this.rentaldetails = new Rental();
-  // this.rentaldetails.id = 1;
-  this.rentaldetails.city = "Tel Aviv";
-  this.rentaldetails.country = "Israel";
-  this.rentaldetails.duration = 30;
+  // this.rentaldetails = new Rental();
+  // // this.rentaldetails.id = 1;3
+  // this.rentaldetails.city = "Tel Aviv";
+  // this.rentaldetails.country = "Israel";
+  // this.rentaldetails.duration = 30;
 
   this.currentRental = new Rental();
-  this.currentRental.city = "Lisbon";
+  this.currentRental.city = "Lisbon Hostel";
   this.currentRental.country = "Portugal";
   this.currentRental.duration = 48;
 
@@ -40,7 +40,7 @@ export class Tab3Page {
 
     goRentals(rental: Rental) {
       this.navCtrl.navigateForward('rentaldetails', 
-      {queryParams: {q: "ionic", 
+      {queryParams: {q: "trips", 
         rentalId: rental.id
 
       }
@@ -59,6 +59,9 @@ export class Tab3Page {
     this.navCtrl.navigateForward('tabs/tab3');
   }
 
-  
+  goHome() {
+    this.navCtrl.navigateForward('tabs');
+  }
+
 
 }

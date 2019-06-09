@@ -2,15 +2,21 @@ export class Rental {
     public id: number;
     public city: string;
     public country: string;
+    public name: string;
+    public location: string;
     public duration: number;
     public cityimage: string;
+    public imageUrl: string;
     public price: number;
 
 
 constructor() {
     this.id = 0;
-    this.city = "";
-    this.country = "";
+    this.name = "";
+    this.location = "";
+    this.imageUrl = "";
+    this.price = 0;
+
     
 }
 
@@ -40,3 +46,17 @@ constructor() {
 // }
 
 }
+
+// export class property {
+//     public id: number;
+//     public city: string;
+//     public country: string;
+//     public name: string;
+//     public location: string;
+//     public duration: number;
+//     public cityimage: string;
+//     public imageUrl: string;
+//     public price: number;
+
+// }
+

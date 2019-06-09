@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+      <ion-title (click)="goBack()">Cancel</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <!-- <div align="center" class="ion-padding">
+        <ion-avatar class="profile">
+          <img src="{{property.imageUrl}}">
+        </ion-avatar>
+        <h1 class="padded" text-center><b>{{property.name}}</b><p> - </p>{{property.location}}</h1>
+        <p>${{property.price}} per night</p>
+      </div> -->
+    <div align="center" class = "ion=padding">   
+      <ion-card>  
+      <ion-item>
+          <ion-label>Check-In Date</ion-label>
+          <ion-datetime [(ngModel)]="booking.dateFrom" placeholder="Click to Select Date" min="2019-01" max="2050"
+            [dayShortNames]="customDayShortNames"
+            displayFormat="DDD, MMM DD, YYYY"
+            monthShortNames="Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"></ion-datetime>
+        </ion-item>
+      <ion-item>
+          <ion-label>Check-Out Date</ion-label>
+          <ion-datetime [(ngModel)]="booking.dateTo" placeholder="Click to Select Date" min="2019-01" max="2050"
+            [dayShortNames]="customDayShortNames"
+            displayFormat="DDD, MMM DD, YYYY"
+            monthShortNames="Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"></ion-datetime>
+        </ion-item>
+      </ion-card>     
+      <ion-button class="main-button" expand="block" (click)="submit()"> 
+          Submit booking request now!
+      </ion-button>
+    </div>
+</ion-content>
